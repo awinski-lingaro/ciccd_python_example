@@ -2,6 +2,12 @@ import nox
 
 
 @nox.session(python=False)
+def install(session):
+    session.run("poetry", "install")
+    session.run("poetry", "run", "pre-commit", "install")
+
+
+@nox.session(python=False)
 def tests(session):
     session.run("poetry", "run", "coverage", "run", "-m", "pytest")
     session.run("poetry", "run", "coverage", "html")

@@ -5,7 +5,34 @@ CI/CD for Python application
 
 ## Prerequisites
 
-Python at least 3.11 configured, poetry and nox
+Python at least 3.11 configured, poetry and nox.
+
+After installing python
+(for mac:
+
+```
+brew install python@3.11
+```
+
+for ubuntu
+
+```
+sudo apt-get install python@3.11
+```
+
+)
+
+run
+
+```
+pip install poetry nox
+```
+
+## Install
+
+```
+nox -e install
+```
 
 ## Run
 
@@ -27,7 +54,7 @@ nox -e tests
 nox -e lint
 ```
 
-## typing
+## Typing
 
 ```
 nox -e typing
