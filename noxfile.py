@@ -10,10 +10,8 @@ def tests(session):
 
 @nox.session(python=False)
 def lint(session):
-    session.run("poetry", "shell")
-    session.run("poetry", "install")
-    session.run("black", "--check", ".")
-    session.run("flake8", ".")
+    session.run("poetry", "run", "black", "--check", ".")
+    session.run("poetry", "run", "flake8", ".")
 
 
 @nox.session(python=False)
