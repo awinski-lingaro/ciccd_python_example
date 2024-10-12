@@ -3,11 +3,9 @@ import nox
 
 @nox.session(python=False)
 def tests(session):
-    session.run("poetry", "shell")
-    session.run("poetry", "install")
-    session.run("coverage", "run", "-m", "pytest")
-    session.run("coverage", "html")
-    session.run("coverage", "report")
+    session.run("poetry", "run", "coverage", "run", "-m", "pytest")
+    session.run("poetry", "run", "coverage", "html")
+    session.run("poetry", "run", "coverage", "report")
 
 
 @nox.session(python=False)
@@ -20,20 +18,14 @@ def lint(session):
 
 @nox.session(python=False)
 def typing(session):
-    session.run("poetry", "shell")
-    session.run("poetry", "install")
-    session.run("mypy", ".")
+    session.run("poetry", "run", "mypy", ".")
 
 
 @nox.session(python=False)
 def format(session):
-    session.run("poetry", "shell")
-    session.run("poetry", "install")
-    session.run("black", ".")
+    session.run("poetry", "run", "black", ".")
 
 
 @nox.session(python=False)
 def run(session):
-    session.run("poetry", "shell")
-    session.run("poetry", "install")
-    session.run("python", "greetings_app/entrypoints/app.py")
+    session.run("poetry", "run", "python", "greetings_app/entrypoints/app.py")
