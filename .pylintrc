@@ -1,0 +1,32 @@
+[MASTER]
+# Your preferred report format
+output-format=parseable
+
+# Specify a baseline to compare the current run against
+# baseline=previous-run
+
+# List of plugins
+load-plugins=pylint.extensions.docstyle
+
+# A comma-separated list of checker names
+disable=C0111,R0903,C0301
+
+[MESSAGES CONTROL]
+# You can customize the message template for all messages.
+# This is done using a dictionary:
+# message-template={msg_id}:{msg}
+# For example:
+# message-template={msg_id}:{obj}: {msg}
+
+[REPORT]
+# Sets the score below which a module has to be rated as bad.
+# Note that the default value is 10.0.
+# rating=y
+
+[REFACTOR]
+# Tells pylint to suggest alternative module names
+# suggest-module-rename=y
+
+[TYPECHECK]
+# Tells pylint to check if classes are used
+# ignored-classes=

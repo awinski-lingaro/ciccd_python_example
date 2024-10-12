@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "greetings_app"
+version = "0.1.0"
+description = "App to display greetings"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^3.0.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+black = "^24.10.0"
+mypy = "^1.11.2"
+pylint = "^3.3.1"
+pre-commit = "^4.0.0"
+bandit = "^1.7.10"
+vulture = "^2.13"
+flake8 = "^7.1.1"
+coverage = {extras = ["toml"], version = "^7.6.1"}
+
+[tool.coverage.run]
+omit = [".*", "*/site-packages/*"]
+
+[tool.coverage.report]
+fail_under = 85
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,30 @@
+# Python-specific files
+__pycache__/
+.pytest_cache/
+.tox/
+nosetests.xml
+coverage.xml
+.coverage
+
+# Caching and build files
+.eggs/
+dist/
+build/
+
+# IDE-specific files
+.vscode/
+.idea/
+.project
+.pydevpath.py
+
+# Virtual environment files
+venv/
+env/
+.venv/
+.nox/
+
+# Miscellaneous
+*.pyc
+*.pyo
+*.swp
+*~
