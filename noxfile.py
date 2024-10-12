@@ -30,3 +30,10 @@ def format(session):
     session.run("poetry", "shell")
     session.run("poetry", "install")
     session.run("black", ".")
+
+
+@nox.session(python=False)
+def run(session):
+    session.run("poetry", "shell")
+    session.run("poetry", "install")
+    session.run("python", "greetings_app/entrypoints/app.py")

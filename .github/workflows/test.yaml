@@ -17,8 +17,8 @@ jobs:
           python-version: '3.11'
       - name: Install Poetry
         run: |
-          curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install.sh | bash -
+          pip install poetry nox
       - name: Install dependencies
         run: poetry install
       - name: Run Lint checks
-        run: poetry run nox -e test
+        run: poetry run nox -e tests
