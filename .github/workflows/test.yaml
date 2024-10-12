@@ -5,6 +5,7 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -20,5 +21,5 @@ jobs:
           pip install poetry nox
       - name: Install dependencies
         run: poetry install
-      - name: Run Lint checks
+      - name: Run tests
         run: poetry run nox -e tests
